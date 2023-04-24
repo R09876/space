@@ -1,0 +1,9 @@
+.text {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 48%);
+  grid-gap: 4%;
+  
+  p {
+    margin: 0;
+  }
+}

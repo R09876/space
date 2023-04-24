@@ -1,0 +1,32 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 45px;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $color-transparent;
+  border: 1px solid $color-default-white;
+  color: $color-default-white;
+  transition: background-color $trans-default, color $trans-default;
+  cursor: pointer;
+
+  @include hover-focus {
+    background-color: $color-default-black;
+  }
+
+  &--bg-o {
+    background-color: rgba($color-black-2, 0.6);
+
+    @include hover-focus {
+      background-color: rgba($color-black-2, 0.9);
+    }
+  }
+
+  &--l {
+    font-size: 24px;
+  }
+}

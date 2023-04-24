@@ -1,0 +1,31 @@
+.title {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 400;
+  font-family: $ff-space;
+  color: $color-default-white;
+
+  &--diff {
+    font-size: 60px;
+
+    strong {
+      font-size: 110px;
+    }
+  }
+
+  &--sf {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: $ff-sf;
+  }
+
+  &--st {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: $ff-sf;
+    color: $color-navy-blue;
+  }
+}

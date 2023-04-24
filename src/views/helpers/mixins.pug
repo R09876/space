@@ -1,0 +1,20 @@
+mixin icon(name, width, height)
+  svg(width=width, height=height, aria-hidden="true")&attributes(attributes)
+    use(xlink:href="img/sprites/sprite.svg#" + name)
+
+mixin picture(path, image, format, width, height, altText)
+  picture(class!=attributes.class)
+    source(type='image/webp', srcset="img/" + path + "/" + image + ".webp" + ", " + "img/" + path + "/" + image + "@2x.webp" + " 2x")
+    img(src="img/" + path + "/" + image + "." + format, srcset= "img/" + path + "/" + image + "@2x." + format + " 2x", width= width, height= height, alt= altText)
+
+mixin img(path, image, format, width, height, altText)
+  img(src=`img/${path}/${image}.${format}`,
+    srcset= format!=='svg' && `img/${path}/${image}.${format} 2x`,
+    width= width, height= height, alt= altText)&attributes(attributes)
+
+include ../../blocks/components/btn/btn
+include ../../blocks/components/text/text
+include ../../blocks/components/table/table
+include ../../blocks/components/about-card/about-card
+include ../../blocks/components/offer-card/offer-card
+include ../../blocks/components/list/list

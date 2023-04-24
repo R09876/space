@@ -2,10 +2,15 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-	- const title = "gulp-pug-starter"
+	- const title = "Космический туризм"
 
 block content
 	include ../blocks/modules/header/header
+	include ../blocks/modules/intro/intro
+	include ../blocks/modules/about-us/about-us
+	include ../blocks/modules/steps/steps
+	include ../blocks/modules/services/services
+	include ../blocks/modules/connection/connection
 	include ../blocks/modules/footer/footer
 
 block scripts

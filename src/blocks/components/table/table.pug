@@ -1,0 +1,11 @@
+mixin table(table)
+  table.table
+    tr
+      each item in table.header
+        th!=item
+    tr
+      each item in table.body
+        td!=item
+    tr
+      each item in table.measure
+        td!=item

@@ -1,0 +1,32 @@
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Space";
+
+  font-display: swap;
+  src: local("Space"),
+    url("../fonts/Space-Age-Cyrillic-Regular.woff2") format("woff2"),
+    url("../fonts/Space-Age-Cyrillic-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "SF";
+
+  font-display: swap;
+  src: local("SF"),
+    url("../fonts/SF-Pro-Display-Regular.woff2") format("woff2"),
+    url("../fonts/SF-Pro-Display-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-style: normal;
+  font-family: "SF";
+
+  font-display: swap;
+  src: local("SF"),
+    url("../fonts/SF-Pro-Display-Bold.woff2") format("woff2"),
+    url("../fonts/SF-Pro-Display-Bold.woff") format("woff");
+}
