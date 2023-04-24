@@ -1,0 +1,6 @@
+-const offers=[{content:"Забронируй полет #{span прямо сейчас} и&nbsp;получи скидку 1000$",old:"250 000 $",new:"249 000 $"},{content:"Приведи друга и&nbsp;получи #{span скидку&nbsp;10%} на&nbsp;следующий полет, если вернешься",old:"250 000 $",new:"225 000 $"}]
+section.offers
+  .container
+    h3.title Спец предложения
+    each offer in offers
+      +offer-card(offer)

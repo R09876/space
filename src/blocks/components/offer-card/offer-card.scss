@@ -1,0 +1,26 @@
+.benefit-card {
+  &__content {
+    position: relative;
+    padding-left: 27px;
+    font-weight: 300;
+    color: $color-black;
+
+    p {
+      margin: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-color: $color-black;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+  }
+}
