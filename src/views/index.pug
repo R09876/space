@@ -3,14 +3,21 @@ include helpers/mixins
 
 block variables
 	- const title = "Космический туризм"
+	- const nav=[{text:"О нас",href:"#"},{text:"Стоимость",href:"#"},{text:"Доп.услуги",href:"#"},{text:"Гарантии",href:"#"},{text:"Новости",href:"#"}]
+	- const footerLinks = [{text:"spacex.com",href:"https://www.spacex.com/"},{text:"blueorigin.com",href:"https://www.blueorigin.com/"},{text:"virgingalactic.com",href:"https://www.virgingalactic.com/"},{text:"0 800 000 000 00",href:"tel:+080000000000"},{text:"МКС",href:"#"}]
 
 block content
-	include ../blocks/modules/header/header
 	include ../blocks/modules/intro/intro
 	include ../blocks/modules/about-us/about-us
 	include ../blocks/modules/steps/steps
+	include ../blocks/modules/booking/booking
 	include ../blocks/modules/services/services
 	include ../blocks/modules/connection/connection
+
+block header
+	include ../blocks/modules/header/header
+
+block footer
 	include ../blocks/modules/footer/footer
 
 block scripts

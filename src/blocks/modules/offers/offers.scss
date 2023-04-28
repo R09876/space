@@ -1,0 +1,13 @@
+.offers {
+  margin-bottom: 142px;
+
+  .title {
+    margin-bottom: 100px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 500px);
+    grid-gap: 16.66%;
+  }
+}

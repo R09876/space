@@ -3,14 +3,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  color: $color-night-rider;
 
   &__item {
     position: relative;
-    margin-bottom: 27px;
-    padding-left: 32px;
-    font-size: 36px;
-    font-weight: 300;
+    margin-bottom: 2px;
+    padding-left: 36px;
+    font-size: 24px;
 
     &:last-child {
       margin-bottom: 0;
@@ -20,18 +18,10 @@
       content: "";
       position: absolute;
       left: 0;
-      top: 10px;
+      top: 4px;
       width: 20px;
       height: 20px;
-      background-color: $color-black;
-    }
-  }
-
-  &--white {
-    color: $color-default-white;
-
-    .list__item::before {
-      top: 0;
+      border-radius: 50%;
       background-color: $color-default-white;
     }
   }

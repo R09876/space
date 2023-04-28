@@ -14,7 +14,7 @@ body {
 
 html {
   // заменить на актуальную высоту шапки на дексктопе по макету
-  --header-height: 104px;
+  --header-height: 130px;
 
   font-style: normal;
   font-weight: 400;
@@ -43,7 +43,7 @@ body {
 }
 
 a {
-  color: $color-default-black;
+  color: $color-default-white;
   text-decoration: none;
 }
 

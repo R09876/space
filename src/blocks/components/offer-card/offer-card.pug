@@ -2,6 +2,6 @@ mixin offer-card(card)
   .offer-card&attributes(attributes)
     .offer-card__content
       p!=card.content
+      span.offer-card__old-price!=card.old
       span.offer-card__new-price!=card.new
-      sup.offer-card__old-price!=card.old
     +btn({text:"ЗАБРОНИРОВАТЬ ПОЛЕТ", label:"Нажмите для бронирования",type:"button"})

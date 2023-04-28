@@ -1,9 +1,10 @@
 .btn {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px 45px;
+  padding: 20px;
   font-size: 18px;
   font-weight: 400;
   text-align: center;
@@ -13,20 +14,76 @@
   color: $color-default-white;
   transition: background-color $trans-default, color $trans-default;
   cursor: pointer;
+  overflow: hidden;
 
-  @include hover-focus {
-    background-color: $color-default-black;
+  &__text {
+    position: relative;
+    z-index: 2;
   }
 
-  &--bg-o {
-    background-color: rgba($color-black-2, 0.6);
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 45%;
+    left: 3%;
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(48% 0, 41% 31%, 37% 42%, 0 47%, 36% 58%, 40% 70%, 50% 100%, 58% 70%, 63% 58%, 100% 49%, 61% 41%, 56% 31%);
+    opacity: 0;
+    transition: opacity $trans-600;
+    background: $gradient-yellow;
+  }
 
-    @include hover-focus {
-      background-color: rgba($color-black-2, 0.9);
+  &::after {
+    top: 10%;
+    left: auto;
+    right: 7%;
+    animation-delay: 0.3s;
+  }
+
+  @include hover-focus {
+    &::before,
+    &::after {
+      opacity: 1;
+      animation-name: scale-in-out;
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: both;
+      animation-direction: normal;
+      animation-iteration-count: infinite;
     }
   }
 
   &--l {
     font-size: 24px;
+    padding: 15px 20px;
+  }
+}
+
+@keyframes scale-in-out {
+  0% {
+    transform: scale(0.7);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(0.7);
+  }
+
+  60% {
+    transform: scale(1.2);
+  }
+
+  80% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.7);
   }
 }

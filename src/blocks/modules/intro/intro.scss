@@ -3,6 +3,7 @@
   display: flex;
   min-height: 100vh;
   height: max-content;
+  padding-top: var(--header-height);
   overflow: hidden;
 
   .container {
@@ -28,25 +29,31 @@
   }
 
   .title {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+
+    strong {
+      line-height: 0.64;
+    }
   }
 
   .text {
     width: 31.92%;
     align-self: flex-end;
-    padding-bottom: 12.9%;
+    padding-bottom: 12.4%;
   }
 
   &__content {
     width: 50%;
     text-align: center;
+    margin-bottom: 120px;
 
     .text {
-      grid-template-columns: repeat(2, 48%);
-      grid-gap: 4%;
+      grid-gap: 5%;
       width: 100%;
-      font-size: 1.25vw;
-      margin-bottom: 49px;
+      font-size: 24px;
+      padding-bottom: 0;
+      margin-bottom: 45px;
+      margin-left: -12px;
     }
   }
 

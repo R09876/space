@@ -1,0 +1,39 @@
+.services {
+  position: relative;
+  padding: 100px 0;
+
+  &__bg {
+    position: absolute;
+    z-index: -3;
+    top: -7px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 30.35%;
+    background: linear-gradient(0deg, $color-black-pearl 0%, rgba($color-black-pearl, 0) 84.9%);
+  }
+
+  &__text {
+    font-size: 24px;
+    font-family: $ff-space;
+    text-align: center;
+  }
+}

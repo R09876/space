@@ -1,11 +1,16 @@
 mixin table(table)
-  table.table
-    tr
-      each item in table.header
-        th!=item
-    tr
-      each item in table.body
-        td!=item
-    tr
-      each item in table.measure
-        td!=item
+  .table
+    table
+      thead
+        tr
+          each item in table.header
+            th!=item
+      tr
+        each item in table.body
+          td!=item
+      tr
+        each item in table.measure
+          td!=item
+    if table.footer
+        each item in table.footer
+          p!=item
