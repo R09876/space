@@ -1,0 +1,41 @@
+.booking {
+  position: relative;
+  min-height: 914px;
+  padding-top: 100px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    top: -4px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, $color-black-pearl 8.85%, rgba($color-black-pearl, 0) 86.98%);
+  }
+
+  img {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .text {
+    width: 31.59%;
+    margin-top: 3px;
+  }
+}

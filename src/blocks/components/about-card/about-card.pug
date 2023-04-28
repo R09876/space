@@ -1,10 +1,10 @@
 mixin about-card(card)
   .about-card&attributes(attributes)
     .about-card__img
-      +picture("content", card.img, "jpg", 500, 540)
+      +picture("content", card.img, "jpg", 500, 540, card.alt)
     .about-card__text
       h3.title.title--sf!=card.title
       h4.title.title--st!=card.subtitle
-      +text(card.text)
+      +text(card.text).text--tree
       +table(card.table)
       +btn({text:"ЗАБРОНИРОВАТЬ ПОЛЕТ", type:"button"})

@@ -1,0 +1,12 @@
+footer.footer
+  .footer__bg
+    +picture("content","space","jpg", 1920,430,"Земля на фоне космоса")
+  .container
+    .footer__text
+      p Служба поддержки работает межгалактично и&nbsp;суборбитально
+      p График приема посетителей строго по&nbsp;записи
+    +nav(nav).nav--col
+    ul.footer__links
+      each item in footerLinks
+        li.footer__item
+          a(href=item.href).footer__link!=item.text

@@ -1,0 +1,61 @@
+.add-services {
+  margin-bottom: 200px;
+  font-size: 24px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .title {
+    margin-bottom: 94px;
+  }
+
+  &__services {
+    width: 51.67%;
+  }
+
+  &__buttons {
+    width: 41.67%;
+    margin-top: -145px;
+
+    .btn {
+      min-height: 60px;
+      margin-bottom: 49px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    padding-top: 130px;
+    margin-bottom: 49px;
+
+    img {
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      right: 0;
+      width: 192px;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+
+  .list {
+    margin-bottom: 22px;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  &__small {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,93 @@
+.about-card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__img {
+    width: 500px;
+    min-height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    width: 600px;
+    margin-top: -6px;
+
+    .title {
+      margin-bottom: 5px;
+    }
+
+    .title--st {
+      margin-bottom: 31px;
+    }
+
+    .text {
+      margin-bottom: 48px;
+    }
+
+    .table {
+      margin-bottom: 50px;
+
+      table {
+        margin-bottom: 20px;
+        font-weight: 400;
+        text-align: center;
+        border-collapse: collapse;
+
+        td {
+          border-top: 1px solid $color-default-white;
+          padding: 0 13px;
+
+          &:first-child {
+            padding-left: 0;
+          }
+        }
+
+        th {
+          padding: 10px 18px 12px;
+          font-weight: 400;
+          border-top: 1px solid $color-default-white;
+
+          &:first-child {
+            padding-left: 0;
+          }
+        }
+
+        tbody {
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 1.194;
+
+          tr:nth-child(2n) td {
+            border-top: none;
+            font-size: 14px;
+            padding-bottom: 8px;
+          }
+
+          tr:last-child td {
+            border-bottom: 1px solid $color-default-white;
+          }
+        }
+      }
+
+      p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.167;
+
+        sub {
+          font-size: 100%;
+        }
+      }
+    }
+  }
+
+  .btn {
+    max-width: 300px;
+  }
+}

@@ -1,8 +1,10 @@
-.services
+section.services
   h2.visually-hidden Наши услуги
-  +picture("content","bg", 1920, 2359, "Космос")
-  include ../booking/booking
-  include ../offers/offers
-  include ../add-services/add-services
-  include ../slider/slider
-  h3.title Ты&nbsp;знаешь о&nbsp;Космическом законе&nbsp;&mdash; представь себе&nbsp;то, что ты&nbsp;хочешь, и&nbsp;оно войдет в&nbsp;твою жизнь.
+  .services__bg
+    +picture("content","bg","jpg", 1920, 2359, "Космос")
+  .container
+    include ../offers/offers
+    include ../add-services/add-services
+    include ../slider/slider
+    .services__text
+      p Ты&nbsp;знаешь о&nbsp;Космическом законе&nbsp;&mdash; представь себе&nbsp;то, что ты хочешь, и&nbsp;оно войдет в&nbsp;твою жизнь.

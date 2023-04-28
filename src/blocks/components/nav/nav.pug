@@ -1,0 +1,6 @@
+mixin nav(nav)
+  nav.nav&attributes(attributes)
+    ul.nav__list 
+      each item in nav
+        li.nav__item
+          a(href=item.href).nav__link!=item.text

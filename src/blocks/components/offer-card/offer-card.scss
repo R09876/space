@@ -1,26 +1,53 @@
-.benefit-card {
+.offer-card {
+  max-width: 500px;
+  text-align: center;
+
   &__content {
-    position: relative;
-    padding-left: 27px;
-    font-weight: 300;
-    color: $color-black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    padding: 10px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    background: $color-transparent;
+    border: 1px solid $color-default-white;
 
     p {
+      width: 49.4%;
       margin: 0;
-    }
+      margin-bottom: 23.4%;
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 20px;
-      height: 20px;
-      background-color: $color-black;
+      span {
+        color: $color-free-speech-red;
+      }
     }
   }
 
-  &__subtitle {
+  &__new-price {
+    font-size: 48px;
+  }
+
+  &__old-price {
+    display: block;
+    position: relative;
+    align-self: flex-end;
     margin-bottom: 16px;
+    margin-right: 13.5%;
+    color: $color-whisper;
+    font-size: 14px;
+
+    &::before {
+      content:"";
+      position: absolute;
+      z-index: 2;
+      top: 40%;
+      left: 0;
+      height: 1px;
+      width: 104%;
+      transform: rotate(17.1deg);
+      background: $color-free-speech-red;
+    }
   }
 }

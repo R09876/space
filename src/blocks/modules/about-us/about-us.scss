@@ -1,0 +1,47 @@
+.about-us {
+  position: relative;
+  padding: 100px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -4px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 18%;
+    background: $gradient-black;
+  }
+
+  &__bg {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    margin-bottom: 106px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 150px;
+  }
+
+  .about-card:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+}

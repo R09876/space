@@ -7,4 +7,5 @@ mixin btn(options = {})
   - const rel = options.isExternal ? "nofollow noopener noreferrer" : false;
   - const label = options.label || "кнопка";
 
-  #{tag}.btn(href=href, target=target, rel=rel, type=type, aria-label=label)&attributes(attributes)!=text
+  #{tag}.btn(href=href, target=target, rel=rel, type=type, aria-label=label)&attributes(attributes)
+    span.btn__text!=text

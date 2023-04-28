@@ -1,0 +1,36 @@
+.contacts {
+  font-size: 24px;
+
+  .title {
+    margin-bottom: 46px;
+  }
+
+  p {
+    width: 95%;
+    margin: 0;
+    margin-bottom: 17%;
+  }
+
+  form {
+    width: 100%;
+    font-size: 14px;
+
+    input {
+      width: 100%;
+      padding: 20px 20px 20px 0;
+      margin-bottom: 8.8%;
+      border: none;
+      border-bottom: 1px solid $color-default-white;
+      background: $color-transparent;
+      color: $color-default-white;
+
+      &:last-of-type {
+        margin-bottom: 10.5%;
+      }
+
+      &::placeholder {
+        color: $color-default-white;
+      }
+    }
+  }
+}
