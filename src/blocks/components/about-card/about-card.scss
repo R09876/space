@@ -1,11 +1,30 @@
 .about-card {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+
+  @include vp-1023 {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 
   &__img {
     width: 500px;
     min-height: 100%;
+
+    @include vp-1299 {
+      width: 40%;
+    }
+
+    @include vp-1023 {
+      width: 500px;
+      margin-bottom: 50px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
 
     img {
       width: 100%;
@@ -17,6 +36,14 @@
   &__text {
     width: 600px;
     margin-top: -6px;
+
+    @include vp-1299 {
+      width: 55%;
+    }
+
+    @include vp-1023 {
+      width: 100%;
+    }
 
     .title {
       margin-bottom: 5px;
@@ -32,12 +59,31 @@
 
     .table {
       margin-bottom: 50px;
+      
+      @include vp-767 {
+        width: calc(100vw - $padding-mob);
+        margin-left: -$padding-mob;
+        margin-bottom: 20px;
+      }
+
+      &__wrapper {
+        @include vp-767 {
+          overflow-y: hidden;
+          width: 100vw;
+          padding: 0 20px;
+        }
+      }
 
       table {
+        min-width: 100%;
         margin-bottom: 20px;
         font-weight: 400;
         text-align: center;
         border-collapse: collapse;
+
+        @include vp-767 {
+          margin-bottom: 20px;
+        }
 
         td {
           border-top: 1px solid $color-default-white;
@@ -45,6 +91,10 @@
 
           &:first-child {
             padding-left: 0;
+          }
+
+          @include vp-1023 {
+            padding: 0 10px;
           }
         }
 
@@ -55,6 +105,14 @@
 
           &:first-child {
             padding-left: 0;
+          }
+
+          @include vp-1023 {
+            padding: 10px 10px 12px;
+          }
+
+          @include vp-767 {
+            white-space: nowrap;
           }
         }
 
@@ -89,5 +147,9 @@
 
   .btn {
     max-width: 300px;
+
+    @include vp-767 {
+      max-width: 100%;
+    }
   }
 }

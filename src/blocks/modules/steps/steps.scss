@@ -2,6 +2,10 @@
   position: relative;
   padding: 100px 0 157px;
 
+  @include vp-1919 {
+    padding: 5.21% 0 8.7%;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -33,6 +37,11 @@
 
   .title {
     margin-bottom: 98px;
+
+    @include vp-1919 {
+      margin-bottom: 8%;
+    }
+  
   }
 
   &__consellation {
@@ -41,10 +50,24 @@
     justify-content: center;
     margin-left: -24.16%;
 
+
+    @include vp-1023 {
+      margin-left: 0;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+    }
+
     svg {
       display: block;
       width: 555px;
       height: 545px;
+
+      @include vp-1023 {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
@@ -56,6 +79,14 @@
     padding: 0;
     list-style: none;
     font-size: 18px;
+
+    @include vp-1023 {
+      width: 40%;
+      height: auto;
+      right: 0;
+      top: 10%;
+      font-size: 16px;
+    }
   }
 
   &__step {
@@ -71,6 +102,10 @@
     -webkit-box-orient: vertical;
     line-clamp: 1;
     box-orient: vertical;
+
+    @include vp-1023 {
+      position: static;
+    }
 
     &[data-step="0"] {
       top: 0;

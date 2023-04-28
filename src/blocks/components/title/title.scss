@@ -7,12 +7,36 @@
   font-family: $ff-space;
   color: $color-default-white;
 
+  @include vp-1023 {
+    max-width: 100%;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+  }
+
   &--diff {
     font-size: 60px;
+
+    @include vp-1023 {
+      font-size: 40px;
+    }
+
+    @include vp-767 {
+      font-size: 30px;
+    }
 
     strong {
       font-size: 110px;
       font-weight: 400;
+
+      @include vp-1023 {
+        font-size: 60px;
+      }
+
+      @include vp-767 {
+        font-size: 40px;
+      }
     }
   }
 
@@ -21,6 +45,10 @@
     font-weight: 700;
     line-height: 1.2;
     font-family: $ff-sf;
+
+    @include vp-767 {
+      font-size: 20px;
+    }
   }
 
   &--st {
@@ -30,5 +58,9 @@
     font-family: $ff-sf;
     color: $color-navy-blue;
     text-transform: uppercase;
+
+    @include vp-767 {
+      font-size: 10px;
+    }
   }
 }

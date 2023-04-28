@@ -1,16 +1,17 @@
 mixin table(table)
   .table
-    table
-      thead
+    .table__wrapper
+      table
+        thead
+          tr
+            each item in table.header
+              th!=item
         tr
-          each item in table.header
-            th!=item
-      tr
-        each item in table.body
-          td!=item
-      tr
-        each item in table.measure
-          td!=item
-    if table.footer
-        each item in table.footer
-          p!=item
+          each item in table.body
+            td!=item
+        tr
+          each item in table.measure
+            td!=item
+      if table.footer
+          each item in table.footer
+            p!=item

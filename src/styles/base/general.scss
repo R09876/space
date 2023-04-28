@@ -33,6 +33,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 
   text-rendering: optimizeLegibility;
+
+  @include vp-767 {
+    font-size: 14px;
+  }
 }
 
 body {

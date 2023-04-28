@@ -2,6 +2,10 @@
   max-width: 500px;
   text-align: center;
 
+  @include vp-767 {
+    margin: 0 auto;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -14,6 +18,11 @@
     background: $color-transparent;
     border: 1px solid $color-default-white;
 
+    @include vp-767 {
+      font-size: 18px;
+      min-height: 320px;
+    }
+
     p {
       width: 49.4%;
       margin: 0;
@@ -22,11 +31,19 @@
       span {
         color: $color-free-speech-red;
       }
+
+      @include vp-767 {
+        width: 100%;
+      }
     }
   }
 
   &__new-price {
     font-size: 48px;
+
+    @include vp-767 {
+      font-size: 24px;
+    }
   }
 
   &__old-price {

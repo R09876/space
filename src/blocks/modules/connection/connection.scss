@@ -1,16 +1,35 @@
 .connection {
   padding: 80px 0;
 
+  @include vp-1919 {
+    padding: 4.17% 0;
+  }
+
   .container {
     display: flex;
     flex-wrap: nowrap;
+
+    @include vp-1023 {
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+    }
   }
 
   .contacts {
     margin-right: 8.3%;
+
+    @include vp-1023 {
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
   }
 
   .guarantees {
     max-width: 600px;
+
+    @include vp-1023 {
+      max-width: 100%;
+    }
   }
 }

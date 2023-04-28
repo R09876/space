@@ -1,13 +1,29 @@
 .offers {
   margin-bottom: 142px;
 
+  @include vp-1919 {
+    margin-bottom: 11.84%;
+  }
+
   .title {
     margin-bottom: 100px;
+
+    @include vp-1919 {
+      margin-bottom: 8.34%;
+    }
   }
 
   &__cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 500px);
-    grid-gap: 16.66%;
+    grid-template-columns: repeat(auto-fill, 41.67%);
+    justify-content: center;
+    grid-column-gap: 16.66%;
+    grid-row-gap: 50px;
+
+    
+    @include vp-767 {
+      grid-template-columns: repeat(1, 100%);
+      justify-content: center;
+    }
   }
 }

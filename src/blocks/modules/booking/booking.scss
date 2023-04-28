@@ -3,9 +3,21 @@
   min-height: 914px;
   padding-top: 100px;
 
+  @include vp-1919 {
+    padding-top: 5.21%;
+  }
+
+  @include vp-1023 {
+    min-height: 500px;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
+
+    @include vp-1023 {
+      flex-direction: column;
+    }
   }
 
   &::before {
@@ -37,5 +49,11 @@
   .text {
     width: 31.59%;
     margin-top: 3px;
+
+    @include vp-1023 {
+      width: 60%;
+      margin-top: 50px;
+      align-self: flex-end;
+    }
   }
 }
