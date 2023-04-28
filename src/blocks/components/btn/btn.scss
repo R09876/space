@@ -16,6 +16,10 @@
   cursor: pointer;
   overflow: hidden;
 
+  @include vp-1023 {
+    font-size: 14px;
+  }
+
   &__text {
     position: relative;
     z-index: 2;

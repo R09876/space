@@ -27,6 +27,10 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 1.167;
+
+    @include vp-1023 {
+      font-size: 16px;
+    }
   }
 
   &--col {
@@ -34,6 +38,10 @@
       flex-direction: column;
       flex-wrap: nowrap;
       align-items: flex-start;
+
+      @include vp-767 {
+        align-items: center;
+      }
     }
 
     .nav__item {
@@ -42,6 +50,10 @@
 
     .nav__link {
       font-size: 16px;
+
+      @include vp-1023 {
+        font-size: 14px;
+      }
     }
   }
 }

@@ -2,23 +2,51 @@
   margin-bottom: 200px;
   font-size: 24px;
 
+  @include vp-1919 {
+    margin-bottom: 16.67%;
+  }
+
+  @include vp-1023 {
+    font-size: 18px;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+
+    @include vp-767 {
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+    }
   }
 
   .title {
     margin-bottom: 94px;
+
+    @include vp-1919 {
+      margin-bottom: 7.84%;
+    }
   }
 
   &__services {
     width: 51.67%;
+
+    @include vp-767 {
+      width: 100%;
+      margin-bottom: 50px;
+    }
   }
 
   &__buttons {
     width: 41.67%;
     margin-top: -145px;
+
+    @include vp-767 {
+      width: 100%;
+      margin-top: 0;
+    }
 
     .btn {
       min-height: 60px;

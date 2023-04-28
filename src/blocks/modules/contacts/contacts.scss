@@ -1,14 +1,27 @@
 .contacts {
   font-size: 24px;
 
+  @include vp-1023 {
+    font-size: 18px;
+  }
+
   .title {
     margin-bottom: 46px;
+
+    
+    @include vp-767 {
+      margin-bottom: 30px;
+    }
   }
 
   p {
     width: 95%;
     margin: 0;
     margin-bottom: 17%;
+
+    @include vp-767 {
+      margin-bottom: 30px;
+    }
   }
 
   form {

@@ -2,6 +2,10 @@
   position: relative;
   padding: 100px 0;
 
+  @include vp-1919 {
+    padding: 5.21% 0;
+  }
+
   &__bg {
     position: absolute;
     z-index: -3;
@@ -35,5 +39,9 @@
     font-size: 24px;
     font-family: $ff-space;
     text-align: center;
+
+    @include vp-1023 {
+      font-size: 18px;
+    }
   }
 }
