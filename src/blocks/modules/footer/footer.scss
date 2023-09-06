@@ -3,6 +3,7 @@
   position: relative;
   min-height: 430px;
   padding-bottom: 0.5%;
+  overflow: hidden;
 
   .container {
     display: flex;
@@ -16,20 +17,23 @@
   }
 
   &__bg {
+    display: flex;
     position: absolute;
     z-index: -2;
     top:0;
     bottom: 0;
     right: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
 
     img {
-      width: 100%;
+      max-width: 200vw;
+      width: 200vw;
+      margin-left: -30%;
       height: 100%;
       object-fit: cover;
-      object-fit: left;
+      animation: flow-left-to-right 50s infinite linear;
     }
   }
 
@@ -119,5 +123,19 @@
     @include vp-1023 {
       font-size: 14px;
     }
+  }
+}
+
+@keyframes flow-left-to-right {
+  0% {
+    transform: translateX(-10%);
+  }
+
+  50% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translateX(-10%);
   }
 }

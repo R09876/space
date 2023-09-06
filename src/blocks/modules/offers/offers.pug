@@ -1,6 +1,6 @@
 -const offers=[{content:"Забронируй полет <span> прямо сейчас</span> и&nbsp;получи скидку 1000$",old:"250 000 $",new:"249 000 $"},{content:"Приведи друга и&nbsp;получи <span>скидку&nbsp;10%</span> на&nbsp;следующий полет, если вернешься",old:"250 000 $",new:"225 000 $"}]
-.offers
-  h3.title Спец предложения
+.offers(id="offers")
+  h3.title(data-scroll data-splitting="") Спец предложения
   .offers__cards
     each offer in offers
-      +offer-card(offer)
+      +offer-card(offer)(data-mouse-parallax="rotate")

@@ -1,9 +1,38 @@
 .offer-card {
   max-width: 500px;
   text-align: center;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  perspective: 1000px;
+  text-shadow: 3px -1px 5px rgba(255, 255, 255, 0.2);
 
   @include vp-767 {
     margin: 0 auto;
+  }
+
+  &.is-active {
+    .offer-card__wrapper {
+      transform: translateZ(60px) scale(0.8);
+      transform-style: preserve-3d;
+    }
+
+    .offer-card__content {
+      transform: translateZ(60px);
+      transform-style: preserve-3d;
+    }
+
+    .btn {
+      transform: translateZ(60px) scale(0.8);
+      transform-style: preserve-3d;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    margin-bottom: 25px;
+    box-shadow: 0px 0px 34px -1px rgba(255, 255, 255, 0.2);
+    background: $color-transparent;
+    border: 1px solid $color-default-white;
   }
 
   &__content {
@@ -13,10 +42,8 @@
     align-items: center;
     min-height: 400px;
     padding: 10px;
-    margin-bottom: 25px;
     font-size: 24px;
     background: $color-transparent;
-    border: 1px solid $color-default-white;
 
     @include vp-767 {
       font-size: 18px;

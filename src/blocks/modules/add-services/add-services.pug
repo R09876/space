@@ -1,13 +1,14 @@
 - const services=["20&nbsp;фотографий в&nbsp;профессиональной обработке","фото книга","магнит на&nbsp;холодильник в&nbsp;подарок"]
-.add-services
-  h3.title Дополнительные услуги
+.add-services(id="add-services")
+  h3.title(data-scroll data-splitting="") Дополнительные услуги
   .add-services__content
     .add-services__services
       p С&nbsp;Bами полетит профессиональный фотограф
       +list(services)
       p.add-services__small Стоимость фотосессии в&nbsp;невесомости 100&nbsp;000&nbsp;$. Доплати 50&nbsp;000&nbsp;$ и&nbsp;получи все фото в&nbsp;цветокоррекции на&nbsp;диске.
     .add-services__buttons
-      .add-services__img
-        +picture("content","astronaut","png",192,150,"астронавт в скафандре с камерой")
-        +btn({text:"КУПИТЬ УСЛУГИ ФОТОГРАФА", label:"Нажмите для бронирования фотографа",type:"button"})
-      +btn({text:"ХОЧУ И ДИСК", label:"Нажмите для заявки на цветокоррекцию фото",type:"button"})
+      .add-services__btn-img
+        .add-services__img(data-scroll)
+          +picture("content","astronaut","png",192,150,"астронавт в скафандре с камерой")
+        +btn({text:"КУПИТЬ УСЛУГИ ФОТОГРАФА", label:"Нажмите для бронирования фотографа",type:"button"})(data-splitting="")
+      +btn({text:"ХОЧУ И ДИСК", label:"Нажмите для заявки на цветокоррекцию фото",type:"button"})(data-splitting="")

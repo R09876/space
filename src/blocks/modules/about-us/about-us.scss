@@ -6,16 +6,28 @@
     padding: 5.21% 0;
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 38.74%;
+    background: linear-gradient(0, #010203 0%, rgba(1, 2, 3, 0) 84.9%);
+  }
+
   &::before {
     content: "";
     position: absolute;
     z-index: -1;
-    top: -4px;
+    top: -5px;
     right: 0;
     left: 0;
     width: 100%;
     height: 18%;
-    background: $gradient-black;
+    background: linear-gradient(180deg, #010203 0%, rgba(1, 2, 3, 0) 84.9%);
   }
 
   &__bg {
@@ -35,8 +47,13 @@
     }
   }
 
+  .title::before {
+    transition-delay: calc(var(--char-index ) * 0.15s);
+  }
+
   &__title {
     margin-bottom: 106px;
+    transform-origin: top left;
 
     @include vp-1919 {
       margin-bottom: 8.84%;
@@ -54,7 +71,7 @@
     }
 
     @include vp-767 {
-      grid-gap: 50px;
+      grid-gap: 0;
     }
   }
 

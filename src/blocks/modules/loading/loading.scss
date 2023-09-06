@@ -1,0 +1,63 @@
+.loading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: $color-black-pearl;
+
+  &.hidden {
+    display: none;
+  }
+
+  .star {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: $color-navy-blue;
+    clip-path: polygon(50% 0%, 30% 35%, 0% 50%, 30% 65%, 50% 100%, 70% 65%, 100% 50%, 70% 35%);
+    opacity: 0.4;
+    animation: spin 2s alternate infinite;
+
+  }
+  
+  @for $i from 1 to 10 {
+    .star:nth-child(#{$i}) {
+      animation-delay: $i * 0.12s;
+      background: lighten($color-navy-blue, $i * 10%);
+      width: 200px - $i * 20;
+      height: 200px - $i * 20;
+    }
+  }
+}
+
+@keyframes spin {
+  20% {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: rotate(135deg);
+  }
+
+  0% {
+    opacity: 1;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: rotate(135deg);
+  }
+
+  80% {
+    clip-path: polygon(50% 0%, 30% 35%, 0% 50%, 30% 65%, 50% 100%, 70% 65%, 100% 50%, 70% 35%);
+    transform: rotate(0);
+  }
+  
+  100% {
+    opacity: 0.4;
+    clip-path: polygon(50% 0%, 30% 35%, 0% 50%, 30% 65%, 50% 100%, 70% 65%, 100% 50%, 70% 35%);
+    transform: rotate(0);
+  }
+
+}

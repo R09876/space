@@ -1,32 +1,22 @@
 .steps {
   position: relative;
   padding: 100px 0 157px;
+  height: 700vh;
 
   @include vp-1919 {
     padding: 5.21% 0 8.7%;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: 38.74%;
-    background: linear-gradient(0, $color-black-pearl 0%, rgba($color-black-pearl, 0) 100%);
-  }
-
   &__bg {
     position: absolute;
     z-index: -2;
-    top: -4px;
+    top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background: $color-default-black;
 
     img {
       width: 100%;
@@ -35,121 +25,216 @@
     }
   }
 
-  .title {
-    margin-bottom: 98px;
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-height: 100vh;
 
-    @include vp-1919 {
-      margin-bottom: 8%;
+    @include vp-1023 {
+      justify-content: flex-start;
     }
-  
+  }
+
+  .title {
+    padding-bottom: 8%;
   }
 
   &__consellation {
     position: relative;
     display: flex;
     justify-content: center;
-    margin-left: -24.16%;
-
+    width: 843px;
+    height: 603px;
+    margin-left: 4%;
 
     @include vp-1023 {
+      width: 100%;
       margin-left: 0;
+      max-height: 90vh;
+      flex-direction: column;
+      height: auto;
+
+      @include landscape {
+        flex-direction: row;
+      }
     }
 
-    @include vp-767 {
-      flex-direction: column;
+    &.is-small {
+      .steps__list {
+        position: relative;
+        font-size: 14px;
+        height: fit-content;
+      }
+
+      .steps__step {
+        position: static;
+        margin-bottom: 10px;
+  
+        &[data-step="0"] {
+          max-width: 100%;
+        }
+    
+        &[data-step="1"] {
+          max-width: 100%;
+        }
+    
+        &[data-step="2"] {
+          max-width: 100%;
+        }
+    
+        &[data-step="3"] {
+          max-width: 100%;
+        }
+    
+        &[data-step="4"] {
+          text-align: left;
+          transform-origin: center left;
+          max-width: 100%;
+        }
+    
+        &[data-step="5"] {
+          max-width: 100%;
+        }
+    
+        &[data-step="6"] {
+          max-width: 100%;
+        }
+      }
     }
+
 
     svg {
       display: block;
-      width: 555px;
-      height: 545px;
+      width: 70%;
+      height: 93%;
 
       @include vp-1023 {
         width: 100%;
         height: auto;
+        padding: 0;
       }
     }
   }
 
+  &__sticky {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   &__list {
     position:absolute;
-    width: 555px;
-    height: 545px;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
     font-size: 18px;
 
     @include vp-1023 {
-      width: 40%;
-      height: auto;
-      right: 0;
-      top: 10%;
-      font-size: 16px;
+      position: relative;
+      font-size: 14px;
+      height: fit-content;
     }
   }
 
   &__step {
     position: absolute;
     width: 100%;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -moz-box;
-    -moz-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    line-clamp: 1;
-    box-orient: vertical;
+    transform-origin: center left;
+    transition: color $trans-default, transform $trans-default;
 
     @include vp-1023 {
       position: static;
+      margin-bottom: 10px;
     }
 
     &[data-step="0"] {
-      top: 0;
-      left: 35px;
+      top: 1.5%;
+      left: 21%;
+      max-width: 300px;
+
+      @include vp-1023 {
+        max-width: 100%;
+      }
     }
 
     &[data-step="1"] {
-      top: 86px;
-      left: 196px;
+      top: 14%;
+      left: 39%;
+      max-width: 300px;
+
+      @include vp-1023 {
+        max-width: 100%;
+      }
     }
 
     &[data-step="2"] {
-      top: 176px;
-      left: 241px;
+      top: 29%;
+      left: 44%;
+      max-width: 300px;
+
+      @include vp-1023 {
+        max-width: 100%;
+      }
     }
 
     &[data-step="3"] {
-      top: 295px;
-      left: 311px;
+      top: 49%;
+      left: 52%;
+      max-width: 300px;
+
+      @include vp-1023 {
+        max-width: 100%;
+      }
     }
 
     &[data-step="4"] {
-      top: 406px;
-      left: 110px;
+      top: 67.8%;
+      right: 62%;
       max-width: 101px;
-      -webkit-line-clamp: 7;
-      line-clamp: 7;
       text-align: right;
+      transform-origin: center right;
+
+      @include vp-1023 {
+        text-align: left;
+        transform-origin: center left;
+        max-width: 100%;
+      }
     }
 
     &[data-step="5"] {
-      top: 423px;
-      left: 570px;
+      top: 70%;
+      left: 83%;
       max-width: 280px;
-      -webkit-line-clamp: 7;
-      line-clamp: 7;
+
+      @include vp-1023 {
+        max-width: 100%;
+      }
     }
 
     &[data-step="6"] {
-      top: 560px;
-      left: 407px;
+      top: 95%;
+      left: 60%;
       max-width: 140px;
-      -webkit-line-clamp: 5;
-      line-clamp: 5;
+
+      @include vp-1023 {
+        max-width: 100%;
+      }
     }
+  }
+
+  circle {
+    transition: clip-path $trans-default, fill $trans-default;
   }
 }

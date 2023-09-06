@@ -1,0 +1,8 @@
+.link {
+  transition: color $trans-default;
+
+  @include hover-focus {
+    color: $color-free-speech-red;
+    outline: 0;
+  }
+}

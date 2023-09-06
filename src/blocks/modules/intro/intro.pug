@@ -1,11 +1,12 @@
 - const intro = ["Будущее уже наступило!","Осуществи мечту детства!"]
 - const intro2 = ["В&nbsp;2021 году наступила новая эра в&nbsp;освоении космоса&nbsp;&mdash; эра космического туризма. Частные компании получили доступ к&nbsp;космическому пространству.","Между ними обострилась конкуренция, а цена билета на полеты в космическое пространство снизилась в сто раз."]
 
-section.intro
-  +picture("content","intro","jpg",1920,1100,"Астронавт на фоне планет")
+section.intro(data-section="intro")
+  .intro__img
+    +picture("content","intro","jpg",1920,1100,"Астронавт на фоне планет")
   .container
     .intro__content
-      h1.title.title--diff космический #[strong туризм]
+      h1.title.title--diff космический #[span туризм]
       +text(intro)
       +btn({text:"Хочу быть космонавтом!", label:"Нажмите для присоединения к нашей программе", href:"#"}).btn--l
-    +text(intro2)
+    +text(intro2)(class="fade-left")
