@@ -1,6 +1,11 @@
 .nav {
   text-transform: uppercase;
 
+  @include vp-1023 {
+    flex-direction: column;
+    max-height: 100%;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -8,6 +13,10 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @include vp-1023 {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -16,6 +25,10 @@
 
     &:last-child {
       margin-right: 0;
+    }
+
+    @include vp-1023 {
+      margin: 5px 0;
     }
   }
 

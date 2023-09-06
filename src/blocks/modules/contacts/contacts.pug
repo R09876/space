@@ -1,5 +1,5 @@
-.contacts
-  h3.title Контакты
+.contacts(data-section='contacts')
+  h3.title(data-scroll data-splitting="") Контакты
   p Оставь свои контакты и&nbsp;мы&nbsp;перезвоним тебе в&nbsp;ближайшие 100&nbsp;лет!
   form(action="#", method="post")
     label.visually-hidden(for="name") Введите свои имя, фамилию и отчество(при наличии)
@@ -8,4 +8,4 @@
     input(type="text", name="child",id="child",placeholder="Имя ребенка или внука (на всякий случай)" required)
     label.visually-hidden(for="tel") Введите свой телефон для связи
     input(type="tel", name="tel",id="tel",placeholder="Телефон" required)
-    +btn({type:"submit", label:"Нажмите для отправки данных",text:'ЗАБРОНИРОВАТЬ ПОЛЕТ'})
+    +btn({type:"submit", label:"Нажмите для отправки данных",text:'ЗАБРОНИРОВАТЬ ПОЛЕТ'})(data-splitting="")

@@ -12,6 +12,8 @@
   &__img {
     width: 500px;
     min-height: 100%;
+    overflow: hidden;
+    transform: translateX(-70%);
 
     @include vp-1299 {
       width: 40%;
@@ -20,10 +22,21 @@
     @include vp-1023 {
       width: 500px;
       margin-bottom: 50px;
+      transform: translateX(0);
     }
 
     @include vp-767 {
       width: 100%;
+    }
+
+    @include landscape {
+      max-height: 100vh;
+      width: auto;
+
+      img {
+        max-height: 100vh;
+        width: auto;
+      }
     }
 
     img {
@@ -59,6 +72,7 @@
 
     .table {
       margin-bottom: 50px;
+      width: 100%;
       
       @include vp-767 {
         width: calc(100vw - $padding-mob);
@@ -67,74 +81,34 @@
       }
 
       &__wrapper {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-color: $color-default-white;
+        scrollbar-width: thin;
+
+        &::-webkit-scrollbar {
+          height: 5px;
+        }
+        
+        &::-webkit-scrollbar-track {
+          background-color: $color-transparent;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+          background-color: $color-default-white;
+        }
+
         @include vp-767 {
-          overflow-y: hidden;
           width: 100vw;
           padding: 0 20px;
         }
       }
 
-      table {
-        min-width: 100%;
-        margin-bottom: 20px;
-        font-weight: 400;
-        text-align: center;
-        border-collapse: collapse;
-
-        @include vp-767 {
-          margin-bottom: 20px;
-        }
-
-        td {
-          border-top: 1px solid $color-default-white;
-          padding: 0 13px;
-
-          &:first-child {
-            padding-left: 0;
-          }
-
-          @include vp-1023 {
-            padding: 0 10px;
-          }
-        }
-
-        th {
-          padding: 10px 18px 12px;
-          font-weight: 400;
-          border-top: 1px solid $color-default-white;
-
-          &:first-child {
-            padding-left: 0;
-          }
-
-          @include vp-1023 {
-            padding: 10px 10px 12px;
-          }
-
-          @include vp-767 {
-            white-space: nowrap;
-          }
-        }
-
-        tbody {
-          font-size: 36px;
-          font-weight: 700;
-          line-height: 1.194;
-
-          tr:nth-child(2n) td {
-            border-top: none;
-            font-size: 14px;
-            padding-bottom: 8px;
-          }
-
-          tr:last-child td {
-            border-bottom: 1px solid $color-default-white;
-          }
-        }
-      }
-
       p {
         margin: 0;
+        margin-bottom: 10px;
         font-size: 12px;
         line-height: 1.167;
 
@@ -151,5 +125,25 @@
     @include vp-767 {
       max-width: 100%;
     }
+  }
+
+  &.is-inview {
+    .about-card__img img {
+      animation: scale-in 1s ease-in both;
+    }
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(3);
+    transform-origin: top center;
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    transform-origin: top center;
+    opacity: 1;
   }
 }

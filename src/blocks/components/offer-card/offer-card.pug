@@ -1,7 +1,8 @@
 mixin offer-card(card)
   .offer-card&attributes(attributes)
-    .offer-card__content
-      p!=card.content
-      span.offer-card__old-price!=card.old
-      span.offer-card__new-price!=card.new
-    +btn({text:"ЗАБРОНИРОВАТЬ ПОЛЕТ", label:"Нажмите для бронирования",type:"button"})
+    .offer-card__wrapper
+      .offer-card__content
+        p!=card.content
+        span.offer-card__old-price!=card.old
+        span.offer-card__new-price!=card.new
+    +btn({text:"ЗАБРОНИРОВАТЬ ПОЛЕТ", label:"Нажмите для бронирования",type:"button"})(data-splitting="")
