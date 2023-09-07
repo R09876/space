@@ -14,12 +14,12 @@ const initScrollTo = () => {
       if(target.closest('.nav__link')) {
   
         const to = target.getAttribute('href');
-
   
         if(to[0] === '#') {
           e.preventDefault();
-          locoScroll.scrollTo(to, true);
+
           locoScroll.start();
+          locoScroll.scrollTo(to, true);
         }
       }
     });
