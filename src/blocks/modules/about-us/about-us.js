@@ -22,11 +22,12 @@ const initAboutUsAnimation = () => {
       yt = '-10%';
     } else {
       y = '20%';
-      x = '10%';
+      x = '15%';
       yt = '10%';
 
-      if(index % 2 === 0) {
-        y = '-20%';
+      if((index + 1) % 2 === 0) {
+        y = '20%';
+        x = '-15%';
       }
     }
 
