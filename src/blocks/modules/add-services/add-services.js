@@ -1,12 +1,11 @@
 const vpTouch = window.matchMedia('(pointer: coarse)');
 
-export const addServicesAnimation = () => {
+const addServicesAnimation = () => {
   const container = document.querySelector('.add-services');
 
   if(!container) {
     return;
   }
-
 
   gsap.timeline({
     paused: true,
@@ -20,3 +19,5 @@ export const addServicesAnimation = () => {
   }).to('.add-services__img img', {duration: 1, y:0, 'z-index': '1'}).set('.add-services__img', {overflow: 'visible'})
 
 };
+
+export {addServicesAnimation};

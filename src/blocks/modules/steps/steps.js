@@ -40,13 +40,12 @@ const addResize = (img,title,list) => {
 const createAnimation = (container, steps, path, scale) => {
   let i = 0;
 
-
   gsap.timeline({paused: true, scrollTrigger: {
     trigger: container,
     scroller: '[data-scroll-container]',
     start: 'top top',
     end: 'bottom bottom',
-    scrub: true,
+    scrub: vpTouch.matches ? 2 : true,
     onUpdate: (self) => {
       const progressStep = 1 / steps.length;
 
