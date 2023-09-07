@@ -13,10 +13,15 @@
     top: 0;
     bottom: 0;
     right: 0;
-    left: 0;
-    width: 100%;
+    left: calc((-100vw + 1300px)/2);
+    width: 100vw;
     height: 100%;
     background: $color-default-black;
+
+    @include vp-1299 {
+      left: 0;
+      width: 100%;
+    }
 
     img {
       width: 100%;
@@ -52,6 +57,10 @@
     width: 843px;
     height: 603px;
     margin-left: 4%;
+
+    @media (max-width: 1050px) {
+      margin-left: 0;
+    }
 
     @include vp-1023 {
       width: 100%;

@@ -9,7 +9,7 @@ const locoScroll = new LocomotiveScroll({
   el: document.querySelector('[data-scroll-container]'),
   smooth: true,
   smoothMobile: true,
-  touchMultiplier: 4,
+  touchMultiplier: 2.5,
   smartphone: {
     smooth: true,
   },

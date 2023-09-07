@@ -12,7 +12,7 @@ const initBookingAnimation = () => {
     scrollTrigger: {
       scroller: '[data-scroll-container]',
       trigger: container,
-      start: 'center 70%',
+      start: '40% 70%',
       end: '80% 70%',
       scrub: true,
     }

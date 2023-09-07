@@ -60,10 +60,20 @@
 
     .title {
       margin-bottom: 5px;
+
+      @include vp-1023 {
+        width: fit-content;
+        background-color: $color-default-black;
+      }
     }
 
     .title--st {
       margin-bottom: 31px;
+
+      @include vp-1023 {
+        color: $color-default-white;
+        background-color: $color-navy-blue;
+      }
     }
 
     .text {

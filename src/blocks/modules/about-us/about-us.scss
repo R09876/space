@@ -81,5 +81,13 @@
     @include vp-1023 {
       flex-direction: column;
     }
+
+    .about-card__img {
+      transform: translateX(70%);
+
+      @include vp-1023 {
+        transform: translateX(0);
+      }
+    }
   }
 }
