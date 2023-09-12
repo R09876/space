@@ -65,6 +65,16 @@ const createAnimation = (container, steps, path, scale) => {
           steps[i].setAttribute('style', '');
         }
       }
+
+      if(vpTouch.matches && self.progress === 1) {
+        for(i=0; i < steps.length; i++) {
+          if (path[i].getAttribute('clip-path') !== 'circle(50% at 50% 50%)') {
+            path[i].setAttribute('clip-path', 'circle(50% at 50% 50%)');
+            path[i].setAttribute('fill', '#036cca');
+            steps[i].setAttribute('style', `transform: scale(${scale});color:#036cca`);
+          }
+        }
+      }
     },
   }});
 };

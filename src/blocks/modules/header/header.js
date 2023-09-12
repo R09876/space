@@ -9,6 +9,7 @@ const unitBurgerToggle = () => {
     return;
   }
 
+  const body = document.querySelector('body');
   const burger = header.querySelector('.burger');
 
   burger.addEventListener('click', () => {
@@ -16,8 +17,10 @@ const unitBurgerToggle = () => {
 
     if(header.classList.contains('is-active')) {
       locoScroll.stop();
+      body.classList.add('scroll-lock');
     } else {
       locoScroll.start();
+      body.classList.remove('scroll-lock');
     }
   });
 
