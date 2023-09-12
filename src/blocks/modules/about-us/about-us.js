@@ -16,14 +16,20 @@ const initAboutUsAnimation = () => {
     let y = 0;
     let yt = 0;
     let x = 0;
+    let start;
+    let end;
 
     if(vpTouch.matches) {
       y = '20%';
       yt = '-10%';
+      start ='start 70%';
+      end = '80% 30%';
     } else {
       y = '20%';
       x = '15%';
       yt = '10%';
+      start ='-30% 70%';
+      end = '110% 30%';
 
       if((index + 1) % 2 === 0) {
         y = '20%';
@@ -36,9 +42,9 @@ const initAboutUsAnimation = () => {
       scrollTrigger: {
         scroller: '[data-scroll-container]',
         trigger: card,
-        start: '-30% 70%',
-        end: '110% 30%',
-        scrub: 1.5,
+        start: start,
+        end: end,
+        scrub: vpTouch.matches? true : 1.5,
       }
     }).to(text, {y: yt, ease: 'power1.out'}, 0).to(img, {y: y, x: x, ease: 'power1.out'}, 0);
   });

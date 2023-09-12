@@ -10,7 +10,6 @@ const locoScroll = new LocomotiveScroll({
   smooth: true,
 });
 
-
 locoScroll.on('scroll', ScrollTrigger.update);
 
 ScrollTrigger.scrollerProxy('[data-scroll-container]', {
@@ -26,7 +25,6 @@ ScrollTrigger.scrollerProxy('[data-scroll-container]', {
 ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
 ScrollTrigger.defaults({ scroller: '[data-scroll-container]' });
 
-
 const swiper = new Swiper('.swiper', {
   loop: true,
   effect: 'flip',
@@ -37,5 +35,6 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
 
 export {locoScroll};

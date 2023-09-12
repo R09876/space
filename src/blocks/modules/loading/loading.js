@@ -16,7 +16,10 @@ const initLoading = () => {
   setTimeout(() => {
     if(body.classList.contains('scroll-lock')) {
       body.classList.remove('scroll-lock');
-      locoScroll.start();
+
+      if(locoScroll) {
+        locoScroll.start();
+      }
     }
   
     if(!loading.classList.contains('hidden')) {
